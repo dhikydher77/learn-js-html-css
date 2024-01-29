@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oprator typeof and in</title>
+  </head>
+  <body>
+    <script>
+      // let data = 100;
+
+      // const typeData = typeof data;
+      // documnet.writeln(`<p>${typeData}</p>`);
+
+      const person = {
+        fullName: "John",
+        LastName: "Anderson",
+      };
+
+      if ("firstName" in person) {
+        alert(`hello ${person.firstName}`);
+      } else {
+        alert("Please enter");
+      }
+      // peringatan in operator hanya akan mengecek apakah sebuah property atau index ada atau tidak walau pun value nya undefined atau null
+      const student = {
+        firstName: "jennifer",
+        middleName: undefined,
+        LastName: "Anderson",
+      };
+
+      if ("middleName" in student) {
+        alert(`Hello ${student.middleName}`);
+      } else {
+        alert("hello Nyet");
+      }
+    </script>
+  </body>
+</html>

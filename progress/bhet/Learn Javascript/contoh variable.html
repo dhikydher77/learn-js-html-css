@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contoh variable & const string template</title>
+
+</head>
+<body>
+    <!--data di variabel let itu bisa di ubah ubah sesuka nya berbeda dengan const
+    dimana data cont itu tidak bisa di ubah lagi value nya-->
+    <script>
+
+        let fullName = "dhiky obet dhermawan";
+        let middleName = "obet";
+        let lastName = "dhermawan";
+        const application = "Belajar Javascript"
+
+        fullName = "Dhiky obet dhermawan";
+        middleName = "obet";
+        lastName = "dhermawan";
+
+        document.write(fullName + " ");
+        document.write("</br>");
+        document.write(middleName + " ");
+        document.write("</br>");
+        document.write(lastName + " ");
+        
+        //lebih baik menggunakan string tamplate dari pada di tambah2 string plus seperti di atas, 
+            //contoh seperti di bawah
+        
+        const nama = "Ahmad Elghifary Dhermawan";
+        const namaDepan = "Ahmad";
+        const namaTengah = "Elghifary";
+        const namaBelakang = "Dhermawan";
+        const template = `nama : ${namaDepan} ${namaTengah} ${namaBelakang}`;
+        const lama = "nama :" + namaDepan + "" + namaTengah + "" + namaBelakang;
+
+        console.info(template);
+
+        const nilai = 90;
+        const template2 = `nama : ${nama} ,lulus : ${nilai > 70}`;
+
+        console.info(template2);
+
+        const multiline = `nama saya obet,
+aku lagi belajar nih guys,
+ya bginilah hidup, emng kadang kadang`;
+
+        document.writeln("<pre>")
+        document.writeln(multiline);
+        document.writeln("</pre>")
+    //sedangkan pada string petik dua itu tidak bisa multiline seperti backtick di atas
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+h1,h2 {
+  color: rgb(98, 177, 98);
+  font-family: "Courier New", Courier, monospace;
+  font-size: larger; font-size: 50px; font-variant: small-caps;
+}
+
+body {background-image: url(../download\ \(1\).jpg); background-color: rgb(169, 169, 179); background-repeat: no-repeat; background-position: top right;}
+
+ol li a { color : red ; font-size: large;}
+li {font-size: x-large; }
+
+div.bagiansatu {
+    weight :200px ;color: red;}
+
+/*di bawah ini adalah pseudo class*/
+
+.hello:link {
+    color: darkorange;
+}
+
+.hello:hover {
+    color: darkred; font-family: 'Courier New', Courier, monospace; font-size: 20px;
+}
+.hello:active {
+    font-style: italic;
+}
+.hello:visited {
+    color: darkviolet;
+}
+
+li:nth-child(2) a { /* ini bisa first-child,last-child,nth-child untuk nth()nya bisa urutan nomer 1,2,..pola (2n),(3n+1),(4n-1),.. atau ganjil genap(even)&(odd) */
+    color: darkorange;
+}
+
+p:first-of-type {
+     color: blue;
+}
+
+/* id adalah penanda untuk link tapi sebaik nya tidak di gunakan untuk css sebaiknya gunakan class*/
+
+#p1 {text-align: left; text-decoration:underline; text-rendering: geometricPrecision; word-spacing: 10px;}
+
+.cetak-tebal { font-weight: bolder;}
+
+.p2 { color: brown;}
+
+
+
+/* inherit kegunaan nya untuk mewariskan element yang beda misal kita pengen warna semua body sama trus anchor beda element agar element anchor bisa ikut sama sama warna nya kita bisa menggunakan code inherit*/ 

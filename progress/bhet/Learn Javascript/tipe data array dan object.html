@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>menambahkan data ke array</title>
+  </head>
+  <body>
+    <div id="tampilkanarray"></div>
+    <input type="text" id="isidarifield" />
+    <button onclick="tambah()">buat status</button>
+  </body>
+  <script>
+    var statustext = ["test", "pos"];
+    function tambah() {
+      var isifield = document.getElementById("isidarifield").value;
+      statustext.unshift(isifield);
+      var isifield = (document.getElementById("isidarifield").value = "");
+      document.getElementById("tampilkanarray").innerHTML = statustext;
+      console.table(statustext);
+    }
+    document.getElementById("tampilkanarray").innerHTML = statustext;
+    console.table(statustext);
+    console.info(statustext[0]);
+
+    const orang = {
+      "nama lengkap": "chris jenderson",
+      alamat: "los angeles",
+      umur: 35,
+    };
+
+    console.info(`"nama" :${orang["nama lengkap"]}`);
+    console.info(`"alamat" :${orang.alamat}`);
+    console.info(`"umur" :${orang.umur}`);
+
+    statustext.push("eko", "kurniawan");
+    statustext.push([1, 2, 3], ["sksk", "wdfjjd"]);
+
+    console.table(statustext);
+    console.info(statustext[3]);
+  </script>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 2000px;
+      }
+
+      .kotak {
+        background-color: rgb(26, 23, 23);
+        position: fixed;
+        top: 100px;
+        bottom: 100px;
+        right: 100px;
+        left: 100px;
+        opacity: 0.7; /* oppacity untuk membuat transparan*/
+        /*kita bisa membuat element kotak tidak mempunyai lebar dan tinggi
+              menggunakan left 0 right 0 bottom 0 top 0 seolah olah element nya di tarik dari kiri ke kanan dan hasil nya sama persis
+            */
+      }
+
+      .close {
+        width: 50px;
+        height: 50px;
+        background-color: aliceblue;
+        border: 3px solid black;
+        border-radius: 50%;
+        position: absolute;
+        top: -15px;
+        right: -15px;
+      }
+      h1 {
+        margin-top: 50px;
+      }
+      /*
+        div {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+        }
+        .satu {
+            background-color: red;
+            z-index: 1;
+        }
+        .dua {
+            background-color: green;
+            top: 100px;
+            left: 100px;
+            z-index: 2;
+        }
+        .tiga {
+            background-color: blue;
+            top: 200px;
+            left: 200px;
+        } */
+      /* kenapa biru paling depan karna markup nya kita taruh paling terakhir itu adalah perilaku default dari element html yang kita punya
+        nah untuk mengatur posisi tumpukan dari dimensi yang non static seperti relative absolut dan fixed 
+        kita bisa memakai properti z-index & untuk mengatur tumpukan kotak kita paling depan dengan kita itu kita bisa menambahkan angka nya 
+        yang paling besar seperti cntoh di atas
+        */
+    </style>
+  </head>
+  <body>
+    <!--
+    <div class="satu"></div>
+    <div class="dua"></div>-->
+    <div class="kotak"><div class="close"></div></div>
+
+    <h1>hello bray</h1>
+    <h2>Selamat datang di neraka</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores commodi repellat sunt molestias illo maiores ut assumenda a voluptatum quas maxime architecto blanditiis, laborum cumque tempore tempora minima eius ad dolor corrupti
+      sequi voluptate dolore praesentium! Nemo necessitatibus est aspernatur incidunt, tempore, et corporis vel dicta id earum iste dolores?
+    </p>
+    <svg width="99" height="109" viewBox="0 0 99 109" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M81.0541 25.1777C82.2299 25.1777 83.183 24.2246 83.183 23.0488C83.183 21.8731 82.2299 20.9199 81.0541 20.9199C79.8784 20.9199 78.9252 21.8731 78.9252 23.0488C78.9252 24.2246 79.8784 25.1777 81.0541 25.1777Z" fill="white" />
+      <path
+        d="M88.7649 74.9274C92.0296 72.5422 94.156 68.6878 94.156 64.344C94.156 57.1196 88.2785 51.2421 81.054 51.2421C73.8296 51.2421 67.9521 57.1196 67.9521 64.344C67.9521 68.6876 70.0785 72.5422 73.3431 74.9274C69.909 76.5724 67.078 79.28 65.2769 82.6219C63.4759 79.28 60.6448 76.5724 57.2107 74.9274C60.4754 72.5422 62.6017 68.6878 62.6017 64.344C62.6017 57.1196 56.7243 51.2421 49.4998 51.2421C42.2754 51.2421 36.3979 57.1196 36.3979 64.344C36.3979 68.6876 38.5242 72.5422 41.7889 74.9274C38.3548 76.5724 35.5238 79.28 33.7227 82.6219C31.9216 79.28 29.0906 76.5724 25.6565 74.9274C28.9212 72.5422 31.0475 68.6878 31.0475 64.344C31.0475 57.1196 25.17 51.2421 17.9456 51.2421C10.7211 51.2421 4.84408 57.1198 4.84408 64.3442C4.84408 68.6878 6.97044 72.5424 10.2351 74.9276C4.20839 77.8144 0.0359497 83.9738 0.0359497 91.0903V106.867C0.0359497 108.046 0.990977 109.001 2.16911 109.001H33.7231H65.2771H96.8311C98.0093 109.001 98.9643 108.046 98.9643 106.867V91.0903C98.9641 83.9736 94.7917 77.8144 88.7649 74.9274ZM72.2182 64.3442C72.2182 59.4722 76.1818 55.5084 81.054 55.5084C85.9262 55.5084 89.8898 59.472 89.8898 64.3442C89.8898 69.2164 85.9262 73.18 81.054 73.18C76.1818 73.18 72.2182 69.2162 72.2182 64.3442ZM40.6642 64.3442C40.6642 59.4722 44.6278 55.5084 49.5 55.5084C54.3722 55.5084 58.3358 59.472 58.3358 64.3442C58.3358 69.2164 54.3722 73.18 49.5 73.18C44.6278 73.18 40.6642 69.2162 40.6642 64.3442ZM9.1102 64.3442C9.1102 59.4722 13.0738 55.5084 17.946 55.5084C22.8182 55.5084 26.7818 59.472 26.7818 64.3442C26.7818 69.2164 22.8182 73.18 17.946 73.18C13.0738 73.18 9.1102 69.2162 9.1102 64.3442ZM4.30206 91.0901C4.30206 83.5667 10.4227 77.4461 17.946 77.4461C25.4694 77.4461 31.59 83.5667 31.59 91.0901V104.734H4.30206V91.0901ZM35.8561 91.0901C35.8561 83.5667 41.9767 77.4461 49.5 77.4461C57.0234 77.4461 63.144 83.5667 63.144 91.0901V104.734H35.8561V91.0901ZM94.698 104.734H67.4101V91.0901C67.4101 83.5667 73.5307 77.4461 81.054 77.4461C88.5774 77.4461 94.698 83.5667 94.698 91.0901V104.734Z"
+        fill="white"
+      />
+      <path
+        d="M17.0298 45.8907C17.773 46.2441 18.6533 46.1387 19.292 45.6193L27.8153 38.6869H43.3635L47.732 45.1579C48.1287 45.7453 48.7912 46.0974 49.4999 46.0974C50.2086 46.0974 50.8711 45.7453 51.2677 45.1579L55.6363 38.6869H71.2318L79.7035 45.6156C80.0921 45.9335 80.5711 46.0976 81.0543 46.0976C81.3645 46.0976 81.6766 46.0299 81.9676 45.892C82.7123 45.539 83.1871 44.7886 83.1871 43.9645V32.6359C83.1871 31.4578 82.232 30.5028 81.0539 30.5028C79.8758 30.5028 78.9207 31.4578 78.9207 32.6359V39.4642L73.3439 34.9028C72.9628 34.5911 72.4857 34.4208 71.9935 34.4208H54.503C53.7943 34.4208 53.1318 34.7729 52.7352 35.3603L49.5001 40.1522L46.2652 35.3605C45.8686 34.7729 45.2061 34.421 44.4974 34.421H27.0576C26.5673 34.421 26.0919 34.59 25.7117 34.8994L20.0795 39.4804V9.11023C20.0795 6.4393 22.2524 4.26611 24.9236 4.26611H74.0773C76.7482 4.26611 78.9214 6.43909 78.9214 9.11023V13.4917C78.9214 14.6699 79.8764 15.6249 81.0545 15.6249C82.2327 15.6249 83.1877 14.6699 83.1877 13.4917V9.11023C83.1873 4.08686 79.1004 0 74.0771 0H24.9232C19.8998 0 15.8129 4.08686 15.8129 9.11023V43.9645C15.8129 44.7875 16.2866 45.5373 17.0298 45.8907Z"
+        fill="white"
+      />
+      <path
+        d="M25.9669 18.3976C25.9669 21.926 28.8375 24.7968 32.3662 24.7968C35.8949 24.7968 38.7655 21.9262 38.7655 18.3976C38.7655 14.8689 35.8949 11.9983 32.3662 11.9983C28.8375 11.9983 25.9669 14.8689 25.9669 18.3976ZM34.4994 18.3976C34.4994 19.5738 33.5424 20.5307 32.3662 20.5307C31.19 20.5307 30.233 19.5738 30.233 18.3976C30.233 17.2213 31.19 16.2644 32.3662 16.2644C33.5424 16.2644 34.4994 17.2213 34.4994 18.3976Z"
+        fill="white"
+      />
+      <path
+        d="M43.1002 18.3976C43.1002 21.926 45.9708 24.7968 49.4995 24.7968C53.0281 24.7968 55.8987 21.9262 55.8987 18.3976C55.8987 14.8689 53.0279 11.9983 49.4995 11.9983C45.971 11.9983 43.1002 14.8689 43.1002 18.3976ZM51.6326 18.3976C51.6326 19.5738 50.6757 20.5307 49.4995 20.5307C48.3232 20.5307 47.3663 19.5738 47.3663 18.3976C47.3663 17.2213 48.3232 16.2644 49.4995 16.2644C50.6757 16.2644 51.6326 17.2213 51.6326 18.3976Z"
+        fill="white"
+      />
+      <path
+        d="M60.2343 18.3976C60.2343 21.926 63.1049 24.7968 66.6336 24.7968C70.1623 24.7968 73.0329 21.9262 73.0329 18.3976C73.0329 14.8689 70.1623 11.9983 66.6336 11.9983C63.1049 11.9983 60.2343 14.8689 60.2343 18.3976ZM68.7665 18.3976C68.7665 19.5738 67.8096 20.5307 66.6334 20.5307C65.4572 20.5307 64.5002 19.5738 64.5002 18.3976C64.5002 17.2213 65.4572 16.2644 66.6334 16.2644C67.8098 16.2644 68.7665 17.2213 68.7665 18.3976Z"
+        fill="white"
+      />
+    </svg>
+  </body>
+  <!-- ada yang nama nya CSS "Position" terdiri dari 
+    -(static) yang menjadi default nya 
+    -(relative) untuk bebas mengatur posisi berbeda dari dimensi normal nya
+    -(absolute) keluar dari dimensi normal akan tetapi dia akan mencari element parent terdekat yang non static cntoh sperti body dll 
+    -(fixed) perilaku nya hampir seperti absolute akan tetapi dia akan tetap pada posisi nya tanpa memperdulikan parent nya dan ketika di scroll dia akan tetap pada posisi -->
+</html>
